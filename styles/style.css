@@ -1,5 +1,436 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--fon-color);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  max-width: 1440px;
+}
+.header {
+  height: 100vh;
+  min-height: 768px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  margin-block-end: 60px;
+}
+.header_heading {
+  font-family: var(--main-font), sans-serif;
+  font-weight: var(--font-bold);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  color: var(--heading-color-text);
+  text-shadow: 4px 5px 0 var(--accent-color);
+  grid-row: 2;
+  grid-column: 1 / 4;
+}
+.header__theme-menu {
+  position: relative;
+  grid-column: 2 / 4;
+}
+.header__theme-menu-list {
+  justify-self: center;
+  display: grid;
+  grid-auto-flow: column;
+  margin-block-start: 21px;
+  gap: 24px;
+}
+.header__theme-menu-button:hover {
+  outline: 1px solid rgba(var(--accent-color-rgb), 0.6);
+  outline-offset: -1px;
+}
+.header__theme-menu-button:focus {
+  outline: none;
+}
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--theme-color);
+}
+.header__theme-menu-button_active {
+  pointer-events: none;
+  outline: 1px solid var(--theme-color);
+  outline-offset: -1px;
+}
+.decorative-rec {
+  position: absolute;
+  font-size: var(--font-size);
+  font-weight: var(--font-normal);
+  line-height: 25px;
+  top: 20px;
+  right: 49px;
+  color: var(--accent-color);
+}
+.decorative-rec::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  top: 8px;
+  right: -19px;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  border-color: var(--theme-color);
+  top: 20px;
+  right: 21px;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-width:  0 0 1px 1px;
+  border-style: solid;
+  border-color: var(--theme-color);
+  bottom: 20px;
+  left: 20px;
+}
+.header__theme-menu-button {
+  background-color: transparent;
+  color: var(--accent-color);
+  font-family: var(--main-font), sans-serif;
+  font-weight: var(--font-normal);
+  font-size: var(--font-size);
+  color: var(--theme-color);
+  line-height: 18px;
+  border: none;
+  text-transform: lowercase;
+}
+.header_text {
+  grid-row: 3;
+  grid-column: 3 / 5;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: var(--font-bold);
+  font-size: var(--font-size);
+  align-self: start;
+  max-width: 491px;
+  margin-block-start: 76px;
+}
+.main {
+  display: grid;
+  padding: 0 20px;
+  row-gap: 80px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: min-content;
+}
+.title-decor {
+  color: var(--fon-color);
+  background-color: var(--accent-color);
+}
+.content-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  grid-column: 1 / 4;
+
+}
+.heading_section {
+  display: grid;
+  grid-row: 1 / 3;
+  color: var(--theme-color);
+  grid-column: 1;
+  font-family: 'IBM Plex Mono';
+  font-weight: var(--font-bold);
+  font-size: var(--font-size);
+  line-height: 23.4px;
+  margin-block-end: 19px;
+}
+.section-attention {
+  column-gap: 20px;
+}
+.subheading_content-reasons {
+  grid-column: 2 / 4;
+  margin-inline-start: 6px;
+}
+.subheading_content-dopamine {
+  margin-block-start: 20px;
+}
+.subheading_content-font{
+  height: 23px;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  font-weight: var(--font-bold);
+}
+.content {
+  grid-column: 2 / 4;
+  margin-block-start: 10px;
+  margin-inline-start: 6px;
+}
+p {
+  font-weight: var(--font-normal);
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  line-height: 23.4px;
+}
+.subheading_content-multitasking {
+  grid-column: 1;
+  margin-block-end: 11px;
+}
+.content-multitasking {
+  grid-column: 1;
+}
+.subheading_content-food {
+  grid-row: 3;
+  grid-column: 2;
+}
+.content-food {
+  grid-column: 2;
+}
+.subheading_content-gadgets {
+  grid-column: 3;
+  grid-row: 3;
+}
+.content-gadgets {
+  grid-column: 3;
+}
+.subheading-list {
+  margin-inline-start: 7px;
+  grid-column: 2 / 4;
+}
+.list-advice {
+  grid-column: 2 / 4;
+  margin-inline-start: 6px;
+}
+.list-item-title.subheading_content-font {
+  margin-block: 20px 10px;
+  font-weight: var(--font-normal);
+}
+.subheading-pictures {
+  grid-area: subheading;
+}
+.text-link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+.text-link:hover {
+  text-decoration: underline;
+}
+.text-link:focus-visible {
+  outline: 1px solid var(--theme-color);
+}
+.card-pictures {
+  gap: 20px;
+  grid-template-areas:
+        "subheading subheading subheading"
+        "sunset sunset ice"
+        "tape books ice"
+        "tape street street";
+}
+.picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.picture-sunset {
+  grid-area: sunset;
+}
+.picture-ice-cream {
+  grid-area: ice;
+}
+.picture-tape {
+  grid-area: tape;
+}
+.picture-books {
+  grid-area: books;
+}
+.picture-street {
+  grid-area: street;
+}
+.footer {
+  margin-block-start: 60px;
+}
+.footer_heading {
+  justify-self: center;
+  grid-column: 2 / 4;
+  text-shadow: 3px 3px 0 var(--accent-color);
+}
+@media (width > 377px) and (width <= 768px) {
+  .header__theme-menu {
+    position: relative;
+    grid-column: 4;
+    align-self: center;
+    margin-inline-end: 30px;
+    margin-block-start: 46px;
+  }
+  .header__theme-menu-list {
+    justify-self: end;
+    display: grid;
+    gap: 14px;
+    margin: 0;
+    grid-auto-flow: row;
+  }
+  .header_text {
+    max-width: 362px;
+    margin-block-start: 135px;
+  }
+  .heading_section-reasons {
+    width: 19ch;
+  }
+  .subheading_content-reasons {
+    grid-column: 2 / 4;
+    margin-inline-start: 14px;
+  }
+  .content {
+    margin-inline-start: 14px;
+  }
+  .heading_section {
+    margin-block-end: 19px;
+  }
+  .column-media {
+    grid-column: 1 / 4;
+  }
+  .subheading_content-multitasking {
+    margin-block-end: 7px;
+  }
+  .subheading_content-food {
+    margin-block-start: 23px;
+    grid-row: 5;
+  }
+  .content-food {
+    margin-block-start: 10px;
+    grid-row: 6;
+    }
+  .subheading_content-gadgets {
+    margin-block: 21px 9px;
+    grid-row: 7;
+ }
+ .content-gadgets {
+    grid-row: 8;
+ }
+ .list-advice {
+  margin-inline-start: 14px;
+ }
+ .subheading-list {
+    margin-inline-start: 12px;
+ }
+ .list-item-title.subheading_content-font {
+    margin-block: 21px 10px;
+ }
+}
+
+@media (max-width: 376px) and (max-height: 668px) {
+  .header,
+  .main
+   {
+    min-height: 668px;
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+    row-gap: 50px;
+  }
+  .content-section {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    margin-block-end: 38px;
+  }
+  .mobile-media, .content {
+  grid-column: 1 / 3;
+  }
+  .header::before {
+    bottom: 10px;
+    left: 10px;
+  }
+  .header::after {
+    top: 10px;
+    right: 10px;
+  }
+  .decorative-rec {
+    top: 9px;
+    right: 37px;
+  }
+  .header_heading {
+    line-height: 99px;
+    font-size:clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+  .header__theme-menu-list {
+    justify-self: flex-end;
+    grid-auto-flow: row;
+    margin-block-start: 74px;
+    margin-inline-end: 8px;
+    gap: 15px;
+  }
+  .header_text {
+     margin-block-start: 1px;
+  } 
+  .heading_section-reasons.mobile-media {
+    width: 32ch;
+  }
+  .subheading_content-reasons {
+    grid-column: 1;
+    margin-block-start: 2px;
+    margin-inline-start: 0;
+  }
+  .content {
+    margin-inline-start: 0;
+  }
+  .subheading_content-dopamine {
+    margin-block-start: 20px;
+  }
+  .subheading-list{
+    height: auto;
+  }
+  .heading_section.mobile-media {
+    grid-row: 1;
+  }
+  .subheading_content-multitasking {
+    grid-row: 2;
+  }
+  .content-multitasking {
+    grid-row: 3;
+  }
+  .subheading_content-food {
+    grid-row: 4;
+    margin-block-start: 19px;
+    margin-block-end: 10px;
+    }
+   
+  .content-food {
+    grid-row: 5;
+   }
+  .subheading_content-gadgets {
+    grid-row: 6;
+    margin-block-start: 20px;
+    margin-block-end: 10px;
+   }
+  .content-gadgets {
+    grid-row: 7;
+  }
+  .subheading-list,
+  .list-advice {
+    margin-inline-start: 0px;
+  }
+  .list-item-title.subheading_content-font {
+    margin-block: 22px 8px;
+  }
+  .subheading_content-font {
+    height: auto;
+  }
+  .card-pictures {
+    gap: 10px;
+    grid-template-areas: 
+    "subheading"
+    "sunset"
+    "ice"
+    "tape"
+    "books"
+    "street";
+  }
+  .footer_heading {
+    justify-self: center;
+    grid-column: 1;
+  }
+  .footer {
+    margin-block-start: 43px;
+ }
 }

@@ -1,12 +1,36 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --fon-color: #353430;
+  --bg-image: url('/images/cover-image-light.png');
+  --accent-color: #FF8DCB;
+  --theme-color: var(--fon-color);
+  --accent-color-rgb: 50, 49, 45;
+  --heading-color-text: #FFC2E6;
 }
+.theme-light p {
+  color: var(--fon-color);
+}
+.theme-light .decorative-rec {
+  display: none;
+}
+.theme-light .decorative-rec::after {
+  display: none;
+}
+ @media(prefers-color-scheme: light) {
+  :root {
+  --fon-color: #353430;
+  --bg-image: url('/images/cover-image-light.png');
+  --accent-color: #FF8DCB;
+  --heading-color: #FFC2E6;
+  --theme-color: var(--fon-color);
+  --accent-color-rgb: 50, 49, 45;
+  }
+  .theme-light .decorative-rec {
+  display: none;
+  }
+.theme-light .decorative-rec::after {
+  display: none;
+  }
+  .theme-light p {
+  color: var(--fon-color);
+}
+ }
