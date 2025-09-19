@@ -203,6 +203,7 @@
 }
 .list-item {
   grid-column: 2 / 4;
+  margin-block-end: 10px;
 }
 .subheading-list {
   margin-block-start: -9px;
@@ -216,9 +217,6 @@
 .list-item-title.subheading_content-font {
   margin-block: 20px 10px;
   font-weight: var(--font-normal);
-}
-.list-item {
-  margin-block-end: 10px;
 }
 .subheading-pictures {
   grid-area: subheading;
@@ -383,6 +381,7 @@
     left: 11px;
   }
   .subheading_content-next {
+    margin-block-start: 20px;
     margin: 18px 0px 11px;
   }
   .article-multitasking {
@@ -419,6 +418,9 @@
     margin-block-start: 2px;
     margin-inline-start: 0;
   }
+  .section-dopamine-mobile {
+    margin-block-start: 18px;
+  }
   .content {
     margin-inline-start: 0;
   }
@@ -436,9 +438,6 @@
   }
   .content-multitasking {
     grid-row: 3;
-  }
-  .subheading_content-next {
-    margin-block-start: 20px;
   }
   .heading-section-list {
     margin-block-start: -10px;

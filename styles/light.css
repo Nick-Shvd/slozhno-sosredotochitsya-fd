@@ -16,22 +16,21 @@
   display: none;
 }
  @media(prefers-color-scheme: light) {
-  :root { 
-    --fon-color: #FFF1F7;
-    --bg-image: url('../images/cover-image-light.png');
-    --accent-color: #FF8DCB;
-    --theme-color: var(--content-color-text);
-    --accent-color-rgb: 50, 49, 45;
-    --heading-color-text: #FFC2E6;
-    --accent-color-rgb: 50, 49, 45;
-    --content-color-text: #353430;
-    --title-text-color: var(--content-color-text);
-
-  }
-  .theme-auto .decorative-rec {
-  display: none;
-  }
-  .theme-auto .decorative-rec::after {
-  display: none;
-  } 
+    :root { 
+      --fon-color: #FFF1F7;
+      --bg-image: url('../images/cover-image-light.png');
+      --accent-color: #FF8DCB;
+      --theme-color: var(--content-color-text);
+      --accent-color-rgb: 50, 49, 45;
+      --heading-color-text: #FFC2E6;
+      --accent-color-rgb: 50, 49, 45;
+      --content-color-text: #353430;
+      --title-text-color: var(--content-color-text);
+    }
+    .theme-auto .decorative-rec {
+      display: none;
+    }
+    .theme-auto .decorative-rec::after {
+      display: none;
+    }
 } 
