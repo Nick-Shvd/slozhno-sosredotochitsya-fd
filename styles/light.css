@@ -1,13 +1,13 @@
 :root.theme-light {
-  --fon-color: #353430;
-  --bg-image: url('/images/cover-image-light.png');
+  --fon-color: #FFF1F7;
+  --bg-image: url('../images/cover-image-light.png');
   --accent-color: #FF8DCB;
-  --theme-color: var(--fon-color);
+  --theme-color: var(--content-color-text);
   --accent-color-rgb: 50, 49, 45;
   --heading-color-text: #FFC2E6;
-}
-.theme-light p {
-  color: var(--fon-color);
+  --content-color-text: #353430;
+  --title-text-color: var(--content-color-text);
+
 }
 .theme-light .decorative-rec {
   display: none;
@@ -16,21 +16,22 @@
   display: none;
 }
  @media(prefers-color-scheme: light) {
-  :root {
-  --fon-color: #353430;
-  --bg-image: url('/images/cover-image-light.png');
-  --accent-color: #FF8DCB;
-  --heading-color: #FFC2E6;
-  --theme-color: var(--fon-color);
-  --accent-color-rgb: 50, 49, 45;
+  :root { 
+    --fon-color: #FFF1F7;
+    --bg-image: url('../images/cover-image-light.png');
+    --accent-color: #FF8DCB;
+    --theme-color: var(--content-color-text);
+    --accent-color-rgb: 50, 49, 45;
+    --heading-color-text: #FFC2E6;
+    --accent-color-rgb: 50, 49, 45;
+    --content-color-text: #353430;
+    --title-text-color: var(--content-color-text);
+
   }
-  .theme-light .decorative-rec {
+  .theme-auto .decorative-rec {
   display: none;
   }
-.theme-light .decorative-rec::after {
+  .theme-auto .decorative-rec::after {
   display: none;
-  }
-  .theme-light p {
-  color: var(--fon-color);
-}
- }
+  } 
+} 

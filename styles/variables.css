@@ -1,13 +1,14 @@
 :root {
   --fon-color: #000028;
-  --bg-image: url('/images/cover-image-dark.png');
+  --bg-image: url('../images/cover-image-dark.png');
   --heading-color-text: #DB00FF;
   --accent-color: #FF0070;
   --theme-color: var(--accent-color);
   --accent-color-rgb: 255, 0, 112;
-  --main-font: 'IBM Plex Mono';
-  --accent-color-rgb: 255, 0, 112;
+  --main-font: 'IBM Plex Mono', 'Arial', sans-serif;
   --font-bold: 700;
   --font-normal: 400;
   --font-size: 18px;
+  --content-color-text: #F1B2CE;
+  --title-text-color: var(--fon-color);
 }
